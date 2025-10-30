@@ -139,9 +139,9 @@ Parquet Files: Also exported to Loaded/full_data.parquet for lightweight, fast s
 🔍 Verification
 
 SQLite verification was performed using a simple SQL query:
-
-import sqlite3, pandas as pd
 ```
+import sqlite3, pandas as pd
+
 with sqlite3.connect('Loaded/full_data.db') as conn:
     preview = pd.read_sql('SELECT * FROM full_data LIMIT 5;', conn)
 display(preview)
@@ -159,6 +159,7 @@ SELECT COUNT(*) FROM full_data;
 → 8996
 ```
 ⚙️ Issues & Resolutions
+```
 Issue	Resolution
 ❌ Database connection closed early	✅ Moved verification query before conn.close()
 ❌ Missing folder “Loaded”	✅ Created directory using os.makedirs()
@@ -166,9 +167,10 @@ Issue	Resolution
 ⚠️ Datatype mismatch warning	✅ Adjusted column types before saving
 
 ✅ Both SQLite and Parquet formats loaded and verified successfully.
-
+```
 🧰 8️⃣ How to Run the Project
 Requirements
+```
 pip install pandas numpy matplotlib jupyter pyarrow
 
 Execution Steps
@@ -182,7 +184,7 @@ Run etl_transform.ipynb → applies all transformations.
 Run etl_load.ipynb → loads data into SQLite and Parquet.
 
 (Optional) Run visualization cells for insights.
-
+```
 All notebooks are fully re-runnable and require no manual edits.
 
 💡 9️⃣ Key Learnings
