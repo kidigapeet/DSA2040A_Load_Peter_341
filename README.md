@@ -141,7 +141,7 @@ Parquet Files: Also exported to Loaded/full_data.parquet for lightweight, fast s
 SQLite verification was performed using a simple SQL query:
 
 import sqlite3, pandas as pd
-
+```
 with sqlite3.connect('Loaded/full_data.db') as conn:
     preview = pd.read_sql('SELECT * FROM full_data LIMIT 5;', conn)
 display(preview)
@@ -157,7 +157,7 @@ Record count verification:
 
 SELECT COUNT(*) FROM full_data;
 → 8996
-
+```
 ⚙️ Issues & Resolutions
 Issue	Resolution
 ❌ Database connection closed early	✅ Moved verification query before conn.close()
