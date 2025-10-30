@@ -125,6 +125,7 @@ Applied **7 major transformations** across multiple categories:
 ### **1️⃣ Total Sales & Profit by Region**
 ```python
 trans_raw.groupby('Region')[['Sales','Profit']].sum().plot(kind='bar')
+```
 🧱 7️⃣ Load & Verification
 
 The Load Phase marks the final step of the ETL pipeline, where the transformed datasets were successfully stored for long-term use and analysis.
