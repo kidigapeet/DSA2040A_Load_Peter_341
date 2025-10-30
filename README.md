@@ -61,7 +61,7 @@ The workflow loads, inspects, cleans, standardizes, enriches, and stores a datas
 ---
 
 ## 🧭 4️⃣ Project Folder Structure
-
+```
 ET_Exam_Peter_341/
 ├── data/
 │ ├── raw_data.csv
@@ -81,7 +81,7 @@ ET_Exam_Peter_341/
 └── .gitignore
 
 ---
-
+```
 ## 🔍 5️⃣ ETL Workflow Summary
 
 ### **A. 🧮 Extract Phase (`etl_extract.ipynb`)**
